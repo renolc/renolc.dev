@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/', // Set the base path for GitHub Pages
+  base: '/',
   build: {
-    outDir: 'dist' // Output directory for the static bundle
+    outDir: 'dist'
   }
 })
