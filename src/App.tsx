@@ -68,16 +68,12 @@ export default () => (
     </nav>
 
     <section id="about" className="bg-gray-100 py-20">
-      <img
-        src="/src/public/logo.svg"
-        alt="Logo"
-        className="mx-auto mb-4 w-50 h-50"
-      />
+      <img src="/logo.svg" alt="Logo" className="mx-auto mb-4 w-50 h-50" />
       <h1 className="text-4xl font-bold text-center">Phillip Gibson</h1>
       <p className="text-center mt-4 max-w-2xl mx-auto">
         I'm a developer with over 15 years of experience, specializing in web
         technologies. My current focus is on front-end development, but I have
-        plenty of full-stack experience. I'm currently open for new
+        plenty of full-stack experience too. I'm currently open for new
         opportunities—let's build something great together!
       </p>
     </section>
@@ -143,9 +139,47 @@ export default () => (
 
     <section id="projects" className="bg-gray-300 py-20">
       <h1 className="text-4xl font-bold text-center">Projects</h1>
-      <p className="text-center mt-4 max-w-2xl mx-auto">
-        This is the projects section.
-      </p>
+      <div className="mt-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'Twitter Clone',
+            description:
+              'A fully responsive Twitter clone with real-time updates and user authentication.',
+            techStack: 'React, Tailwind CSS, Firebase',
+            textColor: 'text-indigo-500',
+            borderColor: 'border-b-indigo-500'
+          },
+          {
+            title: 'Media Browser',
+            description:
+              'A sleek media browser for exploring movies, TV shows, and music.',
+            techStack: 'Vue.js, Vuetify, TMDB API',
+            textColor: 'text-teal-500',
+            borderColor: 'border-b-teal-500'
+          },
+          {
+            title: 'E-Commerce Platform',
+            description:
+              'An e-commerce platform with a modern UI, shopping cart, and payment integration.',
+            techStack: 'Next.js, TypeScript, Stripe API',
+            textColor: 'text-amber-500',
+            borderColor: 'border-b-amber-500'
+          }
+        ].map(({ title, description, techStack, textColor, borderColor }) => (
+          <div
+            key={title}
+            className={`bg-white shadow-md rounded-lg border-b-4 ${borderColor}`}
+          >
+            <div className="rounded-t-lg p-4">
+              <span className={`text-2xl font-bold ${textColor}`}>{title}</span>
+            </div>
+            <div className="p-6">
+              <p className="text-gray-700 mb-4">{description}</p>
+              <p className="text-sm text-gray-500">Tech Stack: {techStack}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
 
     <section id="contact" className="bg-gray-400 py-20">
