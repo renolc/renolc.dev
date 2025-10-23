@@ -1,7 +1,9 @@
 import { Link } from 'react-scroll'
 import { FaGithub, FaBluesky, FaUpwork } from 'react-icons/fa6'
 
-import ContraIcon from './ContraIcon'
+import ContraIcon from './components/ContraIcon'
+import SkillCircle from './components/SkillCircle'
+import skillsData from './data/skills'
 
 export default () => (
   <div className="w-full bg-gray-100">
@@ -76,56 +78,8 @@ export default () => (
       >
         <h1 className="text-4xl font-bold text-center">Skills</h1>
         <div className="mt-8 max-w-2xl mx-auto grid grid-cols-4 gap-8">
-          {[
-            { tech: 'JavaScript', proficiency: 10 },
-            { tech: 'TypeScript', proficiency: 9.25 },
-            { tech: 'Node.js', proficiency: 9 },
-            { tech: 'React', proficiency: 9 },
-            { tech: 'HTML', proficiency: 9 },
-            { tech: 'Postgres', proficiency: 9 },
-            { tech: 'CSS', proficiency: 8 },
-            { tech: 'Git', proficiency: 8 },
-            { tech: 'Jest', proficiency: 8 },
-            { tech: 'Express.js', proficiency: 8 },
-            { tech: 'Next.js', proficiency: 7 },
-            { tech: 'GraphQL', proficiency: 6 },
-            { tech: 'Vite', proficiency: 5 },
-            { tech: 'Tailwind CSS', proficiency: 4 },
-            { tech: 'Go', proficiency: 4 },
-            { tech: 'Ruby on Rails', proficiency: 3 }
-          ].map(({ tech, proficiency }) => (
-            <div key={tech} className="flex flex-col items-center">
-              <div className="relative w-24 h-24">
-                <svg
-                  className="w-full h-full"
-                  viewBox="0 0 44 44"
-                  style={{ transform: 'rotate(-90deg)' }}
-                >
-                  <circle
-                    stroke="#D1D5DB"
-                    strokeWidth={4}
-                    fill="none"
-                    cx={22}
-                    cy={22}
-                    r={20}
-                  />
-                  <circle
-                    stroke="#3B82F6"
-                    strokeWidth={4}
-                    fill="none"
-                    cx={22}
-                    cy={22}
-                    r={20}
-                    strokeDasharray={125.66}
-                    strokeDashoffset={125.66 - (proficiency / 10) * 125.66}
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center text-sm font-medium text-center break-words px-1 max-w-[80%] mx-auto">
-                  {tech}
-                </div>
-              </div>
-            </div>
+          {skillsData.map((data, i) => (
+            <SkillCircle key={i} {...data} />
           ))}
         </div>
       </section>
