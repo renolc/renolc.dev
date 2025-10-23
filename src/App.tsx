@@ -3,7 +3,9 @@ import { FaGithub, FaBluesky, FaUpwork } from 'react-icons/fa6'
 
 import ContraIcon from './components/ContraIcon'
 import SkillCircle from './components/SkillCircle'
+import ProjectTile from './components/ProjectTile'
 import skillsData from './data/skills'
+import projects from './data/projects'
 
 export default () => (
   <div className="w-full bg-gray-100">
@@ -78,8 +80,8 @@ export default () => (
       >
         <h1 className="text-4xl font-bold text-center">Skills</h1>
         <div className="mt-8 max-w-2xl mx-auto grid grid-cols-4 gap-8">
-          {skillsData.map((data, i) => (
-            <SkillCircle key={i} {...data} />
+          {skillsData.map((skill, i) => (
+            <SkillCircle key={i} {...skill} />
           ))}
         </div>
       </section>
@@ -87,46 +89,8 @@ export default () => (
       <section id="projects" className="bg-gray-100 py-20">
         <h1 className="text-4xl font-bold text-center">Projects</h1>
         <div className="mt-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 xl:px-0">
-          {[
-            {
-              title: 'Twitter Clone',
-              description:
-                'A fully responsive Twitter clone with real-time updates and user authentication.',
-              techStack: 'React, Tailwind CSS, Firebase',
-              textColor: 'text-indigo-500',
-              borderColor: 'border-l-indigo-500'
-            },
-            {
-              title: 'Media Browser',
-              description:
-                'A sleek media browser for exploring movies, TV shows, and music.',
-              techStack: 'Vue.js, Vuetify, TMDB API',
-              textColor: 'text-teal-500',
-              borderColor: 'border-l-teal-500'
-            },
-            {
-              title: 'E-Commerce Platform',
-              description:
-                'An e-commerce platform with a modern UI, shopping cart, and payment integration.',
-              techStack: 'Next.js, TypeScript, Stripe API',
-              textColor: 'text-amber-500',
-              borderColor: 'border-l-amber-500'
-            }
-          ].map(({ title, description, techStack, textColor, borderColor }) => (
-            <div
-              key={title}
-              className={`bg-white shadow-md rounded-lg border-l-4 ${borderColor}`}
-            >
-              <div className="rounded-t-lg p-4">
-                <span className={`text-2xl font-bold ${textColor}`}>
-                  {title}
-                </span>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-700 mb-4">{description}</p>
-                <p className="text-sm text-gray-500">Tech Stack: {techStack}</p>
-              </div>
-            </div>
+          {projects.map((project) => (
+            <ProjectTile key={project.title} {...project} />
           ))}
         </div>
       </section>
