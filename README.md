@@ -37,7 +37,6 @@ src/
 ├── data/               # Centralized data
 │   ├── skills.ts      # Skills and proficiency levels
 │   ├── experiences.ts # Work experience data
-│   ├── projects.ts    # Project showcase data
 │   ├── socials.ts     # Social media links
 │   └── navigation.ts  # Navigation items
 ├── types.ts           # TypeScript type definitions
@@ -51,22 +50,6 @@ src/
 - **Accessible** - High contrast ratios and semantic HTML
 - **Performance-First** - Optimized loading and minimal JavaScript
 - **Maintainable** - Well-organized codebase with clear separation of concerns
-
-## 🚦 Getting Started
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
 
 ## 📧 Contact
 
