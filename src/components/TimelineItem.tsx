@@ -41,10 +41,10 @@ export default ({
       />
 
       <div
-        className={`${lineDirClasses} ${dotColor} w-29 hidden lg:block absolute top-6 h-0.5 z-5`}
+        className={`${lineDirClasses} ${dotColor} w-10 hidden lg:block absolute top-6 h-0.5 z-5`}
       />
 
-      <div className={`${cardPosClasses} lg:w-5/12 w-full`}>
+      <div className={`${cardPosClasses} lg:w-1/2 w-full`}>
         <div
           className={`${borderColor} ${cardBorderClasses} bg-white rounded-lg shadow-md p-6`}
         >
