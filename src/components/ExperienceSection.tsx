@@ -9,7 +9,7 @@ export default () => (
         className="hidden lg:block absolute left-1/2 w-0.5 bg-gray-300 transform -translate-x-1/2"
         style={{
           top: '1.5rem',
-          height: `calc(${experiences.length - 1} * (100% / ${experiences.length}) + 1rem)`
+          height: `calc(${experiences.length - 1} * (100% / ${experiences.length}) + 1.5rem)`
         }}
       />
 
