@@ -1,11 +1,10 @@
 import { Link } from 'react-scroll'
-import { FaGithub, FaBluesky, FaUpwork } from 'react-icons/fa6'
 
-import ContraIcon from './components/ContraIcon'
 import SkillCircle from './components/SkillCircle'
 import ProjectTile from './components/ProjectTile'
 import skillsData from './data/skills'
 import projects from './data/projects'
+import socialLinks from './data/socials'
 
 export default () => (
   <div className="w-full bg-gray-100">
@@ -86,15 +85,6 @@ export default () => (
         </div>
       </section>
 
-      <section id="projects" className="bg-gray-100 py-20">
-        <h1 className="text-4xl font-bold text-center">Projects</h1>
-        <div className="mt-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 xl:px-0">
-          {projects.map((project) => (
-            <ProjectTile key={project.title} {...project} />
-          ))}
-        </div>
-      </section>
-
       <section
         id="cta"
         className="py-20 text-white animate-gradient xl:rounded-lg shadow-lg"
@@ -129,44 +119,22 @@ export default () => (
         className="bg-gray-800 text-white py-10 xl:rounded-t-lg shadow-lg"
       >
         <div className="text-center">
-          <p>Contact me via socials</p>
+          <p>Connect with me</p>
           <div className="flex justify-center space-x-4 mt-4">
-            <a
-              href="https://bsky.app/profile/renolc.games"
-              className="hover:text-blue-400"
-              title="Bluesky"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaBluesky size={24} />
-            </a>
-            <a
-              href="https://www.upwork.com/freelancers/~015ed310b1be763832"
-              className="hover:text-blue-400"
-              title="UpWork"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaUpwork size={24} />
-            </a>
-            <a
-              href="https://contra.com/phillip_gibson"
-              className="hover:text-blue-400"
-              title="Contra"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ContraIcon size={24} />
-            </a>
-            <a
-              href="https://github.com/renolc"
-              className="hover:text-blue-400"
-              title="GitHub"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size={24} />
-            </a>
+            {socialLinks.map(({ Icon, ...link }) => {
+              return (
+                <a
+                  key={link.title}
+                  href={link.href}
+                  className="hover:text-blue-400"
+                  title={link.title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon size={24} />
+                </a>
+              )
+            })}
           </div>
         </div>
       </footer>
