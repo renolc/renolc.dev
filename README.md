@@ -1,16 +1,76 @@
-# React + Vite
+# renolc.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Phillip Gibson, a full-stack developer.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** - Optimized for all screen sizes with mobile-first approach
+- **Experience Timeline** - Dynamic experience section with alternating layout on desktop, clean list on mobile
+- **Skill Visualization** - Circular progress indicators showing proficiency levels
+- **Smooth Scrolling Navigation** - Seamless navigation between sections
+- **Component-Based Architecture** - Modular, maintainable React components
+- **Data-Driven Content** - Centralized data management for easy updates
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework:** React 18 with TypeScript
+- **Build Tool:** Vite for fast development and optimized builds
+- **Styling:** Tailwind CSS for responsive design
+- **Icons:** React Icons library
+- **Navigation:** React Scroll for smooth scrolling
+- **Deployment:** GitHub Pages
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/          # Reusable React components
+│   ├── Header.tsx      # Navigation component
+│   ├── HeroSection.tsx # About section
+│   ├── SkillsSection.tsx # Skills grid
+│   ├── ExperienceSection.tsx # Timeline
+│   ├── CTASection.tsx  # Call-to-action
+│   ├── Footer.tsx      # Social links
+│   ├── SkillCircle.tsx # Individual skill indicator
+│   ├── TimelineItem.tsx # Experience timeline item
+│   └── ProjectTile.tsx # Project showcase card
+├── data/               # Centralized data
+│   ├── skills.ts      # Skills and proficiency levels
+│   ├── experiences.ts # Work experience data
+│   ├── projects.ts    # Project showcase data
+│   ├── socials.ts     # Social media links
+│   └── navigation.ts  # Navigation items
+├── types.ts           # TypeScript type definitions
+└── App.tsx           # Main application component
+```
+
+## 🎨 Design Philosophy
+
+- **Clean & Modern** - Minimal design focusing on content
+- **Professional** - Suitable for client and employer presentations
+- **Accessible** - High contrast ratios and semantic HTML
+- **Performance-First** - Optimized loading and minimal JavaScript
+- **Maintainable** - Well-organized codebase with clear separation of concerns
+
+## 🚦 Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 📧 Contact
+
+- **Website:** [renolc.dev](https://renolc.dev)
+- **Email:** hello@renolc.dev
+- **GitHub:** [@renolc](https://github.com/renolc)
+- **Bluesky:** [@renolc.games](https://bsky.app/profile/renolc.games)
