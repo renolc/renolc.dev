@@ -1,8 +1,8 @@
 import { Skill } from '../types'
 
 export default [
-  { tech: 'JavaScript', proficiency: 10 },
-  { tech: 'TypeScript', proficiency: 9.25 },
+  { tech: 'JavaScript', proficiency: 9.5 },
+  { tech: 'TypeScript', proficiency: 9 },
   { tech: 'Node.js', proficiency: 9 },
   { tech: 'React', proficiency: 9 },
   { tech: 'HTML', proficiency: 9 },
