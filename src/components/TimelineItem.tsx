@@ -30,6 +30,8 @@ export default ({
     ? 'border-l-4 lg:border-l-0 lg:border-r-4'
     : 'border-l-4 lg:border-l-4'
 
+  const techContainerClasses = isLeft ? 'lg:justify-end' : ''
+
   return (
     <div
       className={`${containerBottomMargin} relative flex items-center lg:mb-0`}
@@ -51,7 +53,7 @@ export default ({
           <p className="text-sm text-gray-500 mb-3">{period}</p>
           <p className="text-gray-700 mb-4">{description}</p>
           {technologies && (
-            <div className="flex flex-wrap gap-2">
+            <div className={`${techContainerClasses} flex flex-wrap gap-2`}>
               {technologies.map((tech) => (
                 <span
                   key={tech}
